@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     android:background="#F8F8F8"
     tools:context=".PagerActivity"
-    tools:deviceIds="wear">
+    >
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/location_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/location_value_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -33,7 +33,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/location_tv" />
 
     <LinearLayout
         android:id="@+id/user_info_ll"
@@ -43,19 +43,17 @@
         android:padding="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
+        app:layout_constraintTop_toBottomOf="@+id/location_value_tv">
 
         <TextView
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:gravity="center_vertical"
             android:text="Hi Khalid 👋"
             android:textColor="#000"
             android:textSize="25dp"
             android:textStyle="bold"
-
             />
 
         <TextView
@@ -67,7 +65,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/user"
+        android:id="@+id/information_rl"
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:gravity="bottom"
@@ -137,15 +135,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user">
-
-
+        app:layout_constraintTop_toBottomOf="@+id/information_rl">
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/data_vp"
             android:layout_width="match_parent"
             android:layout_height="350dp"
         >
-
         </androidx.viewpager.widget.ViewPager>
     </RelativeLayout>
 

@@ -1,5 +1,7 @@
 package com.example.dardocassignment;
 
+import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -11,7 +13,11 @@ public class CustomPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return new DataInfoFragment();
+        DataInfoFragment dataInfoFragment=new DataInfoFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("anydata", "Any data we can pass with using bundle");
+        dataInfoFragment.setArguments(bundle);
+        return dataInfoFragment;
     }
 
     @Override

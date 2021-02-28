@@ -60,9 +60,9 @@ public class PagerActivity extends AppCompatActivity {
             }
 
             if (position < 0) {
-                view.setTranslationY(-95*offsetRate);
+                view.setTranslationY(-75*offsetRate);
             } else  if (position > 0){
-                view.setTranslationY(95*offsetRate);
+                view.setTranslationY(75*offsetRate);
             }
 
         }
