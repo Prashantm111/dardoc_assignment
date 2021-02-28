@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/item_root"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ic_trepazium"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Data To be Place"
+            android:textSize="25dp"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

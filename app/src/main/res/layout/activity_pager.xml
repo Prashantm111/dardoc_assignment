@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".PagerActivity"
+    tools:deviceIds="wear">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Current Location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/ic_baseline_info_24"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:text="Dubai, UAE"
+
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <LinearLayout
+        android:id="@+id/user_info_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_vertical"
+            android:text="Hi Khalid 👋"
+            android:textColor="#000"
+            android:textSize="25dp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="How can we halp you ?" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:gravity="bottom"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_info_ll">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="60px"
+            android:background="@drawable/round_border_shadow_back"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="160dp"
+            android:paddingBottom="60px">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Covid-19 RT PCR"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:text="We provide yo with the top nurse, caregiveres, doctors, babycare."
+                    android:textColor="#FFFFFF"
+                    android:textSize="15dp" />
+
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="45px"
+            android:layout_alignParentBottom="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_doctor" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user">
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/data_vp"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+        >
+
+        </androidx.viewpager.widget.ViewPager>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
