@@ -13,6 +13,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        init();
+    }
+
+    fun init(){
         proceedButton=findViewById(R.id.proceed_btn);
 
         proceedButton.setOnClickListener {

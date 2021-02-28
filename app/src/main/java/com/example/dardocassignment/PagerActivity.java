@@ -9,7 +9,6 @@ import androidx.viewpager.widget.ViewPager;
 
 public class PagerActivity extends AppCompatActivity {
 
-
     public CustomPagerAdapter mAdapter;
     public ViewPager mViewPager;
 
@@ -19,14 +18,13 @@ public class PagerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pager);
         initPager();
-
     }
 
     private  void initPager(){
         mViewPager = findViewById(R.id.data_vp);
-       mViewPager.setClipToPadding(false);
-        mViewPager.setPadding(getResources().getDimensionPixelOffset(R.dimen.margin_60dp), 0, getResources().getDimensionPixelOffset(R.dimen.margin_60dp), 0);
-        mViewPager.setPageMargin(getResources().getDimensionPixelOffset(R.dimen.margin_30dp));
+        mViewPager.setClipToPadding(false);
+        mViewPager.setPadding(getResources().getDimensionPixelOffset(R.dimen.pager_padding), 0, getResources().getDimensionPixelOffset(R.dimen.pager_padding), 0);
+        mViewPager.setPageMargin(getResources().getDimensionPixelOffset(R.dimen.pager_margin));
         mAdapter = new CustomPagerAdapter(this.getSupportFragmentManager());
         mViewPager.setPageTransformer(true, new CarouselEffectTransformer(this));
         mViewPager.setAdapter(mAdapter);
@@ -42,9 +40,8 @@ public class PagerActivity extends AppCompatActivity {
             this.maxTranslateOffsetX = dp2px(context, 180);
         }
 
+        @Override
         public void transformPage(View view, float position) {
-
-
             if (viewPager == null) {
                 viewPager = (ViewPager) view.getParent();
             }
